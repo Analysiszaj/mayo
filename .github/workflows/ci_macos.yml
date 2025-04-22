@@ -7,7 +7,7 @@ jobs:
   build-macos:
     strategy:
       matrix:
-        qt_version_major: [5, 6]
+        qt_version_major: [6]
         os: [macos-latest]
         #os: [macos-latest-large, macos-latest-xlarge]
 
@@ -53,4 +53,4 @@ jobs:
         with:
           name: mayo-macos-${{matrix.qt_version_major}}
           path: |
-            ${{github.workspace}}/build/mayo.app
+            ${{github.workspace}}/build
